@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#083c42">
+  <title>Cumbia Club — FM1 Groovebox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene" aria-hidden="true"><span class="palm palm-left">🌴</span><span class="sun">☀️</span><span class="palm palm-right">🌴</span><span class="taco taco-one">🌮</span><span class="taco taco-two">🌮</span></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Cumbia Club home"><span class="brand-mark">CC</span><span>CUMBIA <b>CLUB</b><small>FM1 GROOVEBOX · DEMO BUILD</small></span></a>
+      <div class="header-actions"><span class="live-indicator"><i></i> TROPICAL MODE</span><button id="midi-button" class="button button-quiet">Connect MIDI</button></div>
+    </header>
+    <section class="hero">
+      <div><p class="eyebrow">A pocket-sized taste of the tropics</p><h1>Make it <em>cumbia.</em></h1><p class="subtitle">Eight tracks. Sixty-four steps. Instant sabor.</p></div>
+      <div class="hero-sticker" aria-hidden="true">¡A<br>BAILAR!<span>✦</span></div>
+    </section>
+    <section class="transport panel" aria-label="Transport controls">
+      <button id="play-button" class="play-button" aria-label="Play">▶</button>
+      <button id="stop-button" class="stop-button" aria-label="Stop">■</button>
+      <div class="bpm-control"><label for="bpm">TEMPO</label><div class="bpm-line"><input id="bpm" type="range" min="70" max="160" value="104"><output id="bpm-value">104</output><span>BPM</span></div></div>
+      <div class="transport-divider"></div>
+      <label class="swing-control">SWING <input id="swing" type="range" min="0" max="45" value="10"><output id="swing-value">10%</output></label>
+      <div class="transport-spacer"></div>
+      <button id="cumbia-button" class="button button-hot">✦ Instant Cumbia</button>
+      <button id="clear-button" class="button button-quiet">Clear</button>
+    </section>
+    <section class="pattern-bar">
+      <div class="pattern-title"><span class="eyebrow">THE ARRANGEMENT</span><strong>Pattern <span id="pattern-name">01 — Playa</span></strong></div>
+      <div class="pattern-presets" role="group" aria-label="Pattern presets"><button class="preset active" data-preset="classic">Cumbia clásica</button><button class="preset" data-preset="sonidera">Sonidera</button><button class="preset" data-preset="norteña">Norteña</button></div>
+      <div class="bar-count"><span id="bar-display">BAR 1 / 4</span><div class="bar-dots"><i class="active"></i><i></i><i></i><i></i></div></div>
+    </section>
+    <section class="sequencer panel" aria-label="64-step sequencer">
+      <div class="grid-head"><div class="track-head">TRACK / INSTRUMENT</div><div class="step-labels" id="step-labels"></div></div>
+      <div id="tracks"></div>
+      <footer class="grid-footer"><span><b>●</b> ACTIVE STEP</span><span><b class="playhead-key">▏</b> PLAYHEAD</span><span>CLICK A CELL TO TOGGLE · MELODIC CELLS CYCLE NOTES</span></footer>
+    </section>
+    <section class="bottom-grid">
+      <article class="panel rhythm-panel"><div class="section-heading"><div><span class="eyebrow">GENERATIVE GROOVE</span><h2>Euclidean rhythm</h2></div><span class="round-icon">◉</span></div><p class="panel-copy">Spread hits evenly across the bar. Select a track, then dial in your pattern.</p>
+        <div class="euclid-controls"><label>TRACK<select id="euclid-track"></select></label><label>HITS <output id="hits-value">4</output><input id="hits" type="range" min="0" max="16" value="4"></label><label>ROTATE <output id="rotate-value">0</output><input id="rotate" type="range" min="0" max="15" value="0"></label><button id="apply-euclid" class="button button-dark">Apply to 16 steps</button></div><div class="euclid-preview" id="euclid-preview" aria-label="Euclidean rhythm preview"></div>
+      </article>
+      <article class="panel sound-panel"><div class="section-heading"><div><span class="eyebrow">THE HOUSE BAND</span><h2>Sound &amp; connection</h2></div><span class="round-icon">♫</span></div><p class="panel-copy">Percussion, warm bass, piano, and bright brass are synthesized in your browser. MIDI output is optional.</p><div class="sound-chips"><span>🥁 PERCUSSION</span><span>🎹 PIANO</span><span>🎺 BRASS</span><span>〰️ FM-INSPIRED</span></div><p id="status" class="status" role="status">Ready when you are. Turn up the speakers! 🌊</p></article>
+    </section>
+    <footer class="site-footer"><span>MADE FOR SUNNY AFTERNOONS <b>☀</b></span><span>64 STEPS · 4 BARS · 8 TRACKS</span><span>¡QUE SIGA LA FIESTA!</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
